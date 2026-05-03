@@ -8,6 +8,7 @@ pre: " <b> 4.4 </b> "
 Bây giờ chúng ta test toàn bộ flow bằng HTTP request thực tế. Bạn có thể dùng **Postman**, **curl**, hoặc PowerShell.
 
 Đặt Invoke URL của bạn vào biến:
+
 ```
 BASE_URL = https://xxxxxxxxxx.execute-api.us-east-1.amazonaws.com/dev
 ```
@@ -17,6 +18,7 @@ BASE_URL = https://xxxxxxxxxx.execute-api.us-east-1.amazonaws.com/dev
 ## Test 1: Đăng nhập đúng thông tin
 
 **PowerShell:**
+
 ```powershell
 Invoke-RestMethod -Method POST `
   -Uri "$BASE_URL/login" `
@@ -25,6 +27,7 @@ Invoke-RestMethod -Method POST `
 ```
 
 **curl:**
+
 ```bash
 curl -X POST "$BASE_URL/login" \
   -H "Content-Type: application/json" \
@@ -32,6 +35,7 @@ curl -X POST "$BASE_URL/login" \
 ```
 
 Kết quả mong đợi:
+
 ```json
 {
   "accessToken": "...",
@@ -42,13 +46,14 @@ Kết quả mong đợi:
 
 Sao chép `idToken` — bạn sẽ dùng nó ở các test tiếp theo.
 
-![Đăng nhập thành công](/images/workshop/RQ1.png)
+![Đăng nhập thành công](/images/img/RQ1.png)
 
 ---
 
 ## Test 2: Lấy danh sách bài hát với token hợp lệ
 
 **PowerShell:**
+
 ```powershell
 Invoke-RestMethod -Method GET `
   -Uri "$BASE_URL/songs" `
@@ -56,28 +61,36 @@ Invoke-RestMethod -Method GET `
 ```
 
 **curl:**
+
 ```bash
 curl -X GET "$BASE_URL/songs" \
   -H "Authorization: <dán idToken vào đây>"
 ```
 
 Kết quả mong đợi:
+
 ```json
 {
   "songs": [
-    { "songId": "1", "title": "Lạc Trôi", "artist": "Sơn Tùng M-TP", "genre": "vpop" }
+    {
+      "songId": "1",
+      "title": "Lạc Trôi",
+      "artist": "Sơn Tùng M-TP",
+      "genre": "vpop"
+    }
   ],
   "count": 1
 }
 ```
 
-![Lấy bài hát thành công](/images/workshop/Result.png)
+![Lấy bài hát thành công](/images/img/Result.png)
 
 ---
 
 ## Test 3: Lấy bài hát không có token
 
 **PowerShell:**
+
 ```powershell
 Invoke-RestMethod -Method GET -Uri "$BASE_URL/songs"
 ```
@@ -86,13 +99,14 @@ Kết quả mong đợi: `401 Unauthorized`
 
 Request bị API Gateway từ chối trước khi đến Lambda.
 
-![Không có token](/images/workshop/Result2.png)
+![Không có token](/images/img/Result2.png)
 
 ---
 
 ## Test 4: Đăng nhập sai mật khẩu
 
 **PowerShell:**
+
 ```powershell
 Invoke-RestMethod -Method POST `
   -Uri "$BASE_URL/login" `
@@ -102,7 +116,7 @@ Invoke-RestMethod -Method POST `
 
 Kết quả mong đợi: `401` với message `"Email hoặc mật khẩu không đúng"`
 
-![Sai mật khẩu](/images/workshop/Result3.png)
+![Sai mật khẩu](/images/img/Result3.png)
 
 ---
 

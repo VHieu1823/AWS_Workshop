@@ -12,21 +12,21 @@
     <title>Testing :: AWS System Manager</title>
 
     
-    <link href="/AWS_Workshop/css/nucleus.css?1777791143" rel="stylesheet">
-    <link href="/AWS_Workshop/css/fontawesome-all.min.css?1777791143" rel="stylesheet">
-    <link href="/AWS_Workshop/css/hybrid.css?1777791143" rel="stylesheet">
-    <link href="/AWS_Workshop/css/featherlight.min.css?1777791143" rel="stylesheet">
-    <link href="/AWS_Workshop/css/perfect-scrollbar.min.css?1777791143" rel="stylesheet">
-    <link href="/AWS_Workshop/css/auto-complete.css?1777791143" rel="stylesheet">
-    <link href="/AWS_Workshop/css/atom-one-dark-reasonable.css?1777791143" rel="stylesheet">
-    <link href="/AWS_Workshop/css/theme.css?1777791143" rel="stylesheet">
-    <link href="/AWS_Workshop/css/hugo-theme.css?1777791143" rel="stylesheet">
+    <link href="/AWS_Workshop/css/nucleus.css?1777791505" rel="stylesheet">
+    <link href="/AWS_Workshop/css/fontawesome-all.min.css?1777791505" rel="stylesheet">
+    <link href="/AWS_Workshop/css/hybrid.css?1777791505" rel="stylesheet">
+    <link href="/AWS_Workshop/css/featherlight.min.css?1777791505" rel="stylesheet">
+    <link href="/AWS_Workshop/css/perfect-scrollbar.min.css?1777791505" rel="stylesheet">
+    <link href="/AWS_Workshop/css/auto-complete.css?1777791505" rel="stylesheet">
+    <link href="/AWS_Workshop/css/atom-one-dark-reasonable.css?1777791505" rel="stylesheet">
+    <link href="/AWS_Workshop/css/theme.css?1777791505" rel="stylesheet">
+    <link href="/AWS_Workshop/css/hugo-theme.css?1777791505" rel="stylesheet">
     
-    <link href="/AWS_Workshop/css/theme-workshop.css?1777791143" rel="stylesheet">
+    <link href="/AWS_Workshop/css/theme-workshop.css?1777791505" rel="stylesheet">
     
     
 
-    <script src="/AWS_Workshop/js/jquery-3.3.1.min.js?1777791143"></script>
+    <script src="/AWS_Workshop/js/jquery-3.3.1.min.js?1777791505"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/AWS_Workshop/js/lunr.min.js?1777791143"></script>
-<script type="text/javascript" src="/AWS_Workshop/js/auto-complete.js?1777791143"></script>
+<script type="text/javascript" src="/AWS_Workshop/js/lunr.min.js?1777791505"></script>
+<script type="text/javascript" src="/AWS_Workshop/js/auto-complete.js?1777791505"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/vhieu1823.github.io\/AWS_Workshop\/";
     
 </script>
-<script type="text/javascript" src="/AWS_Workshop/js/search.js?1777791143"></script>
+<script type="text/javascript" src="/AWS_Workshop/js/search.js?1777791505"></script>
 
     
   </div>
@@ -895,7 +895,7 @@
   <span style="color:#f92672">&#34;refreshToken&#34;</span>: <span style="color:#e6db74">&#34;...&#34;</span>
 }
 </code></pre></div><p>Copy the <code>idToken</code> — you will use it in the next tests.</p>
-<p><img src="/images/workshop/RQ1.png" alt="Login success"></p>
+<p><img src="/images/img/RQ1.png" alt="Login success"></p>
 <hr>
 <h2 id="test-2-get-songs-with-valid-token">Test 2: Get songs with valid token</h2>
 <p><strong>PowerShell:</strong></p>
@@ -908,18 +908,23 @@
 </code></pre></div><p>Expected response:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
   <span style="color:#f92672">&#34;songs&#34;</span>: [
-    { <span style="color:#f92672">&#34;songId&#34;</span>: <span style="color:#e6db74">&#34;1&#34;</span>, <span style="color:#f92672">&#34;title&#34;</span>: <span style="color:#e6db74">&#34;Lạc Trôi&#34;</span>, <span style="color:#f92672">&#34;artist&#34;</span>: <span style="color:#e6db74">&#34;Sơn Tùng M-TP&#34;</span>, <span style="color:#f92672">&#34;genre&#34;</span>: <span style="color:#e6db74">&#34;vpop&#34;</span> }
+    {
+      <span style="color:#f92672">&#34;songId&#34;</span>: <span style="color:#e6db74">&#34;1&#34;</span>,
+      <span style="color:#f92672">&#34;title&#34;</span>: <span style="color:#e6db74">&#34;Lạc Trôi&#34;</span>,
+      <span style="color:#f92672">&#34;artist&#34;</span>: <span style="color:#e6db74">&#34;Sơn Tùng M-TP&#34;</span>,
+      <span style="color:#f92672">&#34;genre&#34;</span>: <span style="color:#e6db74">&#34;vpop&#34;</span>
+    }
   ],
   <span style="color:#f92672">&#34;count&#34;</span>: <span style="color:#ae81ff">1</span>
 }
-</code></pre></div><p><img src="/images/workshop/Result.png" alt="Get songs success"></p>
+</code></pre></div><p><img src="/images/img/Result.png" alt="Get songs success"></p>
 <hr>
 <h2 id="test-3-get-songs-without-token">Test 3: Get songs without token</h2>
 <p><strong>PowerShell:</strong></p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Invoke-RestMethod -Method GET -Uri <span style="color:#e6db74">&#34;$BASE_URL/songs&#34;</span>
 </code></pre></div><p>Expected: <code>401 Unauthorized</code></p>
 <p>The request is rejected by API Gateway before it even reaches Lambda.</p>
-<p><img src="/images/workshop/Result2.png" alt="Unauthorized"></p>
+<p><img src="/images/img/Result2.png" alt="Unauthorized"></p>
 <hr>
 <h2 id="test-4-login-with-wrong-password">Test 4: Login with wrong password</h2>
 <p><strong>PowerShell:</strong></p>
@@ -928,7 +933,7 @@
   -ContentType <span style="color:#e6db74">&#34;application/json&#34;</span> `
   -Body (@{ email=<span style="color:#e6db74">&#34;test@example.com&#34;</span>; password=<span style="color:#e6db74">&#34;wrongpassword&#34;</span> } | ConvertTo-Json)
 </code></pre></div><p>Expected: <code>401</code> with message <code>&quot;Incorrect email or password&quot;</code></p>
-<p><img src="/images/workshop/Result3.png" alt="Wrong password"></p>
+<p><img src="/images/img/Result3.png" alt="Wrong password"></p>
 <hr>
 <h2 id="check-cloudwatch-logs">Check CloudWatch logs</h2>
 <p>If something is not working as expected, check the Lambda logs:</p>
@@ -1347,19 +1352,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/AWS_Workshop/js/clipboard.min.js?1777791143"></script>
-    <script src="/AWS_Workshop/js/perfect-scrollbar.min.js?1777791143"></script>
-    <script src="/AWS_Workshop/js/perfect-scrollbar.jquery.min.js?1777791143"></script>
-    <script src="/AWS_Workshop/js/jquery.sticky.js?1777791143"></script>
-    <script src="/AWS_Workshop/js/featherlight.min.js?1777791143"></script>
-    <script src="/AWS_Workshop/js/highlight.pack.js?1777791143"></script>
+    <script src="/AWS_Workshop/js/clipboard.min.js?1777791505"></script>
+    <script src="/AWS_Workshop/js/perfect-scrollbar.min.js?1777791505"></script>
+    <script src="/AWS_Workshop/js/perfect-scrollbar.jquery.min.js?1777791505"></script>
+    <script src="/AWS_Workshop/js/jquery.sticky.js?1777791505"></script>
+    <script src="/AWS_Workshop/js/featherlight.min.js?1777791505"></script>
+    <script src="/AWS_Workshop/js/highlight.pack.js?1777791505"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/AWS_Workshop/js/modernizr.custom-3.6.0.js?1777791143"></script>
-    <script src="/AWS_Workshop/js/learn.js?1777791143"></script>
-    <script src="/AWS_Workshop/js/hugo-learn.js?1777791143"></script>
+    <script src="/AWS_Workshop/js/modernizr.custom-3.6.0.js?1777791505"></script>
+    <script src="/AWS_Workshop/js/learn.js?1777791505"></script>
+    <script src="/AWS_Workshop/js/hugo-learn.js?1777791505"></script>
 
-    <link href="/AWS_Workshop/mermaid/mermaid.css?1777791143" rel="stylesheet" />
-    <script src="/AWS_Workshop/mermaid/mermaid.js?1777791143"></script>
+    <link href="/AWS_Workshop/mermaid/mermaid.css?1777791505" rel="stylesheet" />
+    <script src="/AWS_Workshop/mermaid/mermaid.js?1777791505"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
