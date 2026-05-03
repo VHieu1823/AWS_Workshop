@@ -37,4 +37,3 @@ chapter: false
 4.  [Workshop](4-workshop/)
 5.  [Tự đánh giá](5-selfassessment/)
 6.  [Chia sẻ và đóng góp ý kiến](6-sharing_and_feedback/)
-7.  [Chia sẻ và đóng góp ý kiến](6-sharing_and_feedback/)
