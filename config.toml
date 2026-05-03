@@ -1,4 +1,3 @@
-baseURL = "https://vhieu1823.github.io/AWS_Workshop/"
 # Change the default theme to be use when building the site with Hugo
 theme = "hugo-theme-learn"
 
