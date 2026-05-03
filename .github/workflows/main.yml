@@ -1,4 +1,4 @@
-name: Deploy Hugo to GitHub Pages
+name: Deploy Hugo
 
 on:
   push:
@@ -10,8 +10,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
+      - name: Checkout
         uses: actions/checkout@v4
+        with:
+          submodules: true
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3
@@ -19,10 +21,10 @@ jobs:
           hugo-version: 'latest'
           extended: true
 
-      - name: Build site
+      - name: Build
         run: hugo
 
-      - name: Deploy to GitHub Pages
+      - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
