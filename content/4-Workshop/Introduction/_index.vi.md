@@ -29,7 +29,7 @@ Cổng vào của API. Nhận HTTP request từ client và chuyển đến đún
 
 Cơ sở dữ liệu NoSQL. Nhanh, serverless và tự động mở rộng. Dùng để lưu dữ liệu bài hát.
 
-![Sơ đồ kiến trúc](/images/img/workshop_architec.png)
+![Sơ đồ kiến trúc](images/img/workshop_architec.png)
 
 ---
 
