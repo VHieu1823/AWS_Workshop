@@ -2,9 +2,9 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Home on AWS System Manager</title>
-    <link>https://VHieu1823.github.io/AWS_Workshop/</link>
+    <link>https://vhieu1823.github.io/AWS_Workshop/</link>
     <description>Recent content in Home on AWS System Manager</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 20 Apr 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://VHieu1823.github.io/AWS_Workshop/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 20 Apr 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://vhieu1823.github.io/AWS_Workshop/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

@@ -27,7 +27,7 @@ chapter: false
 
 **Thời gian thực tập:** Từ ngày 09/03/2026 đến ngày 09/05/2026
 
-![ConnectPrivate](/images/avatar.jpeg)
+![ConnectPrivate](/AWS_Workshop/images/avatar.jpeg)
 
 ### Nội dung
 
@@ -37,3 +37,4 @@ chapter: false
 4.  [Workshop](4-workshop/)
 5.  [Tự đánh giá](5-selfassessment/)
 6.  [Chia sẻ và đóng góp ý kiến](6-sharing_and_feedback/)
+7.  [Chia sẻ và đóng góp ý kiến](6-sharing_and_feedback/)

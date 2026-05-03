@@ -14,17 +14,17 @@ Chúng ta tạo một REST API với hai route và gắn Cognito JWT Authorizer 
 1. Vào **API Gateway Console** → **Create API**
 2. Chọn **REST API** → **Build**
 
-![Tạo API](/images/img/AG1.png)
+![Tạo API](/AWS_Workshop/images/img/AG1.png)
 
 3. Cấu hình:
    - **API name:** `workshop-api`
    - **Endpoint type:** Regional
 
-![Cấu hình API](/images/img/AG2.png)
+![Cấu hình API](/AWS_Workshop/images/img/AG2.png)
 
 4. Nhấn **Create API**. Bạn sẽ thấy resource gốc `/`.
 
-![Resource gốc](/images/img/AG3.png)
+![Resource gốc](/AWS_Workshop/images/img/AG3.png)
 
 ---
 
@@ -35,7 +35,7 @@ Chúng ta tạo một REST API với hai route và gắn Cognito JWT Authorizer 
 1. Chọn root `/` → **Actions** → **Create Resource**
 2. **Resource name:** `login` → **Create Resource**
 
-![Tạo resource login](/images/img/AG4.png)
+![Tạo resource login](/AWS_Workshop/images/img/AG4.png)
 
 3. Chọn `/login` → **Actions** → **Create Method** → **POST** → ✓
 4. Cấu hình:
@@ -45,7 +45,7 @@ Chúng ta tạo một REST API với hai route và gắn Cognito JWT Authorizer 
 
 5. Nhấn **Save** → **OK** để cấp quyền
 
-![Tạo POST /login](/images/img/AG5.png)
+![Tạo POST /login](/AWS_Workshop/images/img/AG5.png)
 
 ### Resource /songs
 
@@ -58,7 +58,7 @@ Chúng ta tạo một REST API với hai route và gắn Cognito JWT Authorizer 
    - **Lambda function:** `getSongsFunction`
 
 5. Nhấn **Save** → **OK**
-   ![Tạo POST /login](/images/img/getsongapi.png)
+   ![Tạo POST /login](/AWS_Workshop/images/img/getsongapi.png)
 
 ---
 
@@ -73,9 +73,9 @@ Authorizer này sẽ kiểm tra JWT token trên mỗi request đến `GET /songs
    - **Cognito User Pool:** chọn `workshop-pool`
    - **Token source:** `Authorization`
 
-![Tạo Cognito Authorizer](/images/img/auth1.png)
-![Tạo Cognito Authorizer](/images/img/auth2.png)
-![Tạo Cognito Authorizer](/images/img/auth3.png)
+![Tạo Cognito Authorizer](/AWS_Workshop/images/img/auth1.png)
+![Tạo Cognito Authorizer](/AWS_Workshop/images/img/auth2.png)
+![Tạo Cognito Authorizer](/AWS_Workshop/images/img/auth3.png)
 
 3. Nhấn **Create**
 4. Nhấn **Test** → nhập `idToken` từ một lần đăng nhập → kiểm tra trả về `200`
@@ -88,8 +88,8 @@ Authorizer này sẽ kiểm tra JWT token trên mỗi request đến `GET /songs
 2. Nhấn **Method Request**
 3. Ở mục **Authorization**, chọn `CognitoAuthorizer` từ dropdown
 4. Nhấn dấu ✓ để lưu
-   ![Tạo Cognito Authorizer](/images/img/meth1.png)
-   ![Tạo Cognito Authorizer](/images/img/meth42.png)
+   ![Tạo Cognito Authorizer](/AWS_Workshop/images/img/meth1.png)
+   ![Tạo Cognito Authorizer](/AWS_Workshop/images/img/meth42.png)
    Bây giờ `GET /songs` yêu cầu JWT token hợp lệ. `POST /login` vẫn là public.
 
 ---
@@ -100,8 +100,8 @@ Với mỗi resource (`/login` và `/songs`):
 
 1. Chọn resource → **Actions** → **Enable CORS**
 2. Giữ mặc định → **Enable CORS and replace existing CORS headers** → **Yes**
-   ![Tạo Cognito Authorizer](/images/img/cors1.png)
-   ![Tạo Cognito Authorizer](/images/img/cors2.png)
+   ![Tạo Cognito Authorizer](/AWS_Workshop/images/img/cors1.png)
+   ![Tạo Cognito Authorizer](/AWS_Workshop/images/img/cors2.png)
 
 ---
 
@@ -112,7 +112,7 @@ Với mỗi resource (`/login` và `/songs`):
    - **Deployment stage:** [New Stage]
    - **Stage name:** `dev`
 
-![Deploy API](/images/img/AG7.png)
+![Deploy API](/AWS_Workshop/images/img/AG7.png)
 
 3. Nhấn **Deploy**
 4. Sao chép **Invoke URL** — có dạng:

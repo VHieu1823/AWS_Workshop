@@ -16,7 +16,7 @@ Lambda functions need permission to access DynamoDB and write logs to CloudWatch
 1. Go to **IAM Console** → **Roles** → **Create role**
 2. Select **AWS service** → **Lambda** → **Next**
 
-![Create IAM role](/images/workshop/LD3.png)
+![Create IAM role](/AWS_Workshop/images/workshop/LD3.png)
 
 3. Search and attach these two policies:
    - `AmazonDynamoDBFullAccess`
@@ -38,7 +38,7 @@ We need two tables: one for users and one for songs.
 
 1. Go to **DynamoDB Console** → **Tables** → **Create table**
 
-![DynamoDB create table](/images/workshop/DB1.png)
+![DynamoDB create table](/AWS_Workshop/images/workshop/DB1.png)
 
 2. Configure:
    - **Table name:** `songs`
@@ -47,7 +47,7 @@ We need two tables: one for users and one for songs.
 
 3. Click **Create table**
 
-![DynamoDB table created](/images/workshop/DB2.png)
+![DynamoDB table created](/AWS_Workshop/images/workshop/DB2.png)
 
 ### Seed some song data
 
@@ -73,7 +73,7 @@ Once the table is created, add a few items manually so `GET /songs` has data to 
 
 1. Go to **Cognito Console** → **User pools** → **Create user pool**
 
-![Cognito create user pool](/images/workshop/CG1.png)
+![Cognito create user pool](/AWS_Workshop/images/workshop/CG1.png)
 
 2. Configure sign-in:
    - **Sign-in options:** Email
@@ -86,7 +86,7 @@ Once the table is created, add a few items manually so `GET /songs` has data to 
 
 4. Name the user pool `workshop-pool` → **Create user pool**
 
-![Cognito user pool created](/images/workshop/CG2.png)
+![Cognito user pool created](/AWS_Workshop/images/workshop/CG2.png)
 
 5. Note down these values — you will need them later:
    - **User Pool ID** (format: `us-east-1_XXXXXXX`)

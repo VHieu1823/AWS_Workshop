@@ -27,7 +27,7 @@ chapter: false
 
 **Internship duration:** From 09/03/2026 to 09/05/2026
 
-![ConnectPrivate](/images/avatar.jpeg)
+![ConnectPrivate](/AWS_Workshop/images/avatar.jpeg)
 
 ### Content
 
