@@ -12,21 +12,21 @@
     <title>Set up API Gateway :: AWS System Manager</title>
 
     
-    <link href="/AWS_Workshop/css/nucleus.css?1777790417" rel="stylesheet">
-    <link href="/AWS_Workshop/css/fontawesome-all.min.css?1777790417" rel="stylesheet">
-    <link href="/AWS_Workshop/css/hybrid.css?1777790417" rel="stylesheet">
-    <link href="/AWS_Workshop/css/featherlight.min.css?1777790417" rel="stylesheet">
-    <link href="/AWS_Workshop/css/perfect-scrollbar.min.css?1777790417" rel="stylesheet">
-    <link href="/AWS_Workshop/css/auto-complete.css?1777790417" rel="stylesheet">
-    <link href="/AWS_Workshop/css/atom-one-dark-reasonable.css?1777790417" rel="stylesheet">
-    <link href="/AWS_Workshop/css/theme.css?1777790417" rel="stylesheet">
-    <link href="/AWS_Workshop/css/hugo-theme.css?1777790417" rel="stylesheet">
+    <link href="/AWS_Workshop/css/nucleus.css?1777790727" rel="stylesheet">
+    <link href="/AWS_Workshop/css/fontawesome-all.min.css?1777790727" rel="stylesheet">
+    <link href="/AWS_Workshop/css/hybrid.css?1777790727" rel="stylesheet">
+    <link href="/AWS_Workshop/css/featherlight.min.css?1777790727" rel="stylesheet">
+    <link href="/AWS_Workshop/css/perfect-scrollbar.min.css?1777790727" rel="stylesheet">
+    <link href="/AWS_Workshop/css/auto-complete.css?1777790727" rel="stylesheet">
+    <link href="/AWS_Workshop/css/atom-one-dark-reasonable.css?1777790727" rel="stylesheet">
+    <link href="/AWS_Workshop/css/theme.css?1777790727" rel="stylesheet">
+    <link href="/AWS_Workshop/css/hugo-theme.css?1777790727" rel="stylesheet">
     
-    <link href="/AWS_Workshop/css/theme-workshop.css?1777790417" rel="stylesheet">
+    <link href="/AWS_Workshop/css/theme-workshop.css?1777790727" rel="stylesheet">
     
     
 
-    <script src="/AWS_Workshop/js/jquery-3.3.1.min.js?1777790417"></script>
+    <script src="/AWS_Workshop/js/jquery-3.3.1.min.js?1777790727"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/AWS_Workshop/js/lunr.min.js?1777790417"></script>
-<script type="text/javascript" src="/AWS_Workshop/js/auto-complete.js?1777790417"></script>
+<script type="text/javascript" src="/AWS_Workshop/js/lunr.min.js?1777790727"></script>
+<script type="text/javascript" src="/AWS_Workshop/js/auto-complete.js?1777790727"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/vhieu1823.github.io\/AWS_Workshop\/";
     
 </script>
-<script type="text/javascript" src="/AWS_Workshop/js/search.js?1777790417"></script>
+<script type="text/javascript" src="/AWS_Workshop/js/search.js?1777790727"></script>
 
     
   </div>
@@ -893,7 +893,7 @@
 <li>Go to <strong>API Gateway Console</strong> → <strong>Create API</strong></li>
 <li>Select <strong>REST API</strong> → <strong>Build</strong></li>
 </ol>
-<p><img src="/images/img/AG1.png" alt="Create API"></p>
+<p><img src="/AWS_Workshop/images/img/AG1.png" alt="Create API"></p>
 <ol start="3">
 <li>Configure:
 <ul>
@@ -902,11 +902,11 @@
 </ul>
 </li>
 </ol>
-<p><img src="/images/img/AG2.png" alt="Configure API"></p>
+<p><img src="/AWS_Workshop/images/img/AG2.png" alt="Configure API"></p>
 <ol start="4">
 <li>Click <strong>Create API</strong>. You will see the root resource <code>/</code>.</li>
 </ol>
-<p><img src="/images/img/AG3.png" alt="Root resource"></p>
+<p><img src="/AWS_Workshop/images/img/AG3.png" alt="Root resource"></p>
 <hr>
 <h2 id="2-create-resources-and-methods">2. Create resources and methods</h2>
 <h3 id="login-resource">/login resource</h3>
@@ -914,7 +914,7 @@
 <li>Select the root <code>/</code> → <strong>Actions</strong> → <strong>Create Resource</strong></li>
 <li><strong>Resource name:</strong> <code>login</code> → <strong>Create Resource</strong></li>
 </ol>
-<p><img src="/images/img/AG4.png" alt="Create login resource"></p>
+<p><img src="/AWS_Workshop/images/img/AG4.png" alt="Create login resource"></p>
 <ol start="3">
 <li>
 <p>Select <code>/login</code> → <strong>Actions</strong> → <strong>Create Method</strong> → <strong>POST</strong> → ✓</p>
@@ -931,7 +931,7 @@
 <p>Click <strong>Save</strong> → <strong>OK</strong> to grant permission</p>
 </li>
 </ol>
-<p><img src="/images/img/AG5.png" alt="Create POST /login"></p>
+<p><img src="/AWS_Workshop/images/img/AG5.png" alt="Create POST /login"></p>
 <h3 id="songs-resource">/songs resource</h3>
 <ol>
 <li>
@@ -955,7 +955,7 @@
 <p>Click <strong>Save</strong> → <strong>OK</strong></p>
 </li>
 </ol>
-<p><img src="/images/img/getsongapi.png" alt="Create GET /songs"></p>
+<p><img src="/AWS_Workshop/images/img/getsongapi.png" alt="Create GET /songs"></p>
 <hr>
 <h2 id="3-create-cognito-authorizer">3. Create Cognito Authorizer</h2>
 <p>This authorizer will validate the JWT token on every request to <code>GET /songs</code>.</p>
@@ -970,9 +970,9 @@
 </ul>
 </li>
 </ol>
-<p><img src="/images/img/auth1.png" alt="Create Cognito Authorizer">
-<img src="/images/img/auth2.png" alt="Create Cognito Authorizer">
-<img src="/images/img/auth3.png" alt="Create Cognito Authorizer"></p>
+<p><img src="/AWS_Workshop/images/img/auth1.png" alt="Create Cognito Authorizer">
+<img src="/AWS_Workshop/images/img/auth2.png" alt="Create Cognito Authorizer">
+<img src="/AWS_Workshop/images/img/auth3.png" alt="Create Cognito Authorizer"></p>
 <ol start="3">
 <li>Click <strong>Create</strong></li>
 <li>Click <strong>Test</strong> → enter the <code>idToken</code> from a login call → verify it returns <code>200</code></li>
@@ -985,8 +985,8 @@
 <li>Under <strong>Authorization</strong>, select <code>CognitoAuthorizer</code> from the dropdown</li>
 <li>Click the ✓ checkmark to save</li>
 </ol>
-<p><img src="/images/img/meth1.png" alt="Attach authorizer">
-<img src="/images/img/meth42.png" alt="Attach authorizer result"></p>
+<p><img src="/AWS_Workshop/images/img/meth1.png" alt="Attach authorizer">
+<img src="/AWS_Workshop/images/img/meth42.png" alt="Attach authorizer result"></p>
 <p>Now <code>GET /songs</code> requires a valid JWT token. <code>POST /login</code> remains public.</p>
 <hr>
 <h2 id="5-enable-cors">5. Enable CORS</h2>
@@ -995,8 +995,8 @@
 <li>Select the resource → <strong>Actions</strong> → <strong>Enable CORS</strong></li>
 <li>Keep defaults → <strong>Enable CORS and replace existing CORS headers</strong> → <strong>Yes</strong></li>
 </ol>
-<p><img src="/images/img/cors1.png" alt="Enable CORS">
-<img src="/images/img/cors2.png" alt="Enable CORS confirm"></p>
+<p><img src="/AWS_Workshop/images/img/cors1.png" alt="Enable CORS">
+<img src="/AWS_Workshop/images/img/cors2.png" alt="Enable CORS confirm"></p>
 <hr>
 <h2 id="6-deploy-the-api">6. Deploy the API</h2>
 <ol>
@@ -1008,7 +1008,7 @@
 </ul>
 </li>
 </ol>
-<p><img src="/images/img/AG7.png" alt="Deploy API"></p>
+<p><img src="/AWS_Workshop/images/img/AG7.png" alt="Deploy API"></p>
 <ol start="3">
 <li>Click <strong>Deploy</strong></li>
 <li>Copy the <strong>Invoke URL</strong> — it looks like:
@@ -1432,19 +1432,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/AWS_Workshop/js/clipboard.min.js?1777790417"></script>
-    <script src="/AWS_Workshop/js/perfect-scrollbar.min.js?1777790417"></script>
-    <script src="/AWS_Workshop/js/perfect-scrollbar.jquery.min.js?1777790417"></script>
-    <script src="/AWS_Workshop/js/jquery.sticky.js?1777790417"></script>
-    <script src="/AWS_Workshop/js/featherlight.min.js?1777790417"></script>
-    <script src="/AWS_Workshop/js/highlight.pack.js?1777790417"></script>
+    <script src="/AWS_Workshop/js/clipboard.min.js?1777790727"></script>
+    <script src="/AWS_Workshop/js/perfect-scrollbar.min.js?1777790727"></script>
+    <script src="/AWS_Workshop/js/perfect-scrollbar.jquery.min.js?1777790727"></script>
+    <script src="/AWS_Workshop/js/jquery.sticky.js?1777790727"></script>
+    <script src="/AWS_Workshop/js/featherlight.min.js?1777790727"></script>
+    <script src="/AWS_Workshop/js/highlight.pack.js?1777790727"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/AWS_Workshop/js/modernizr.custom-3.6.0.js?1777790417"></script>
-    <script src="/AWS_Workshop/js/learn.js?1777790417"></script>
-    <script src="/AWS_Workshop/js/hugo-learn.js?1777790417"></script>
+    <script src="/AWS_Workshop/js/modernizr.custom-3.6.0.js?1777790727"></script>
+    <script src="/AWS_Workshop/js/learn.js?1777790727"></script>
+    <script src="/AWS_Workshop/js/hugo-learn.js?1777790727"></script>
 
-    <link href="/AWS_Workshop/mermaid/mermaid.css?1777790417" rel="stylesheet" />
-    <script src="/AWS_Workshop/mermaid/mermaid.js?1777790417"></script>
+    <link href="/AWS_Workshop/mermaid/mermaid.css?1777790727" rel="stylesheet" />
+    <script src="/AWS_Workshop/mermaid/mermaid.js?1777790727"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

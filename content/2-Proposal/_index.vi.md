@@ -53,7 +53,7 @@ Giải pháp này giúp hệ thống:
 
 Kiến trúc hệ thống được xây dựng theo mô hình serverless, tập trung vào luồng xử lý API:
 
-![ConnectPrivate](/images/aws_architec.png)
+![ConnectPrivate](/AWS_Workshop/images/aws_architec.png)
 
 - Người dùng gửi request từ frontend đến API Gateway
 - API Gateway sử dụng Cognito Authorizer để xác thực người dùng

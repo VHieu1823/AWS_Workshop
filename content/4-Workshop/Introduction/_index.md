@@ -14,27 +14,35 @@ A simple serverless API for a music app. Users can log in and retrieve a list of
 ## Services used
 
 ### Amazon Cognito
+
 Handles user accounts. Users register and log in through Cognito, which issues a **JWT token** (a signed string that proves who you are). We use this token to protect API routes.
 
 ### AWS Lambda
+
 Runs your code without a server. Each API endpoint maps to one Lambda function. Lambda only runs when a request comes in, so you only pay for actual usage.
 
 ### Amazon API Gateway
+
 The front door of your API. It receives HTTP requests from clients and routes them to the right Lambda function. It also validates JWT tokens before forwarding requests to Lambda.
 
 ### Amazon DynamoDB
+
 A NoSQL database. Fast, serverless, and scales automatically. We use it to store song data.
+
+![Architecture Diagram](/AWS_Workshop/images/img/workshop_architec.png)
 
 ---
 
 ## How a request flows
 
 **Login (public):**
+
 ```
 Client → POST /login → API Gateway → Lambda (login) → Cognito → return JWT token
 ```
 
 **Get songs (protected):**
+
 ```
 Client → GET /songs → API Gateway → [validate JWT] → Lambda (getSongs) → DynamoDB → return songs
 ```

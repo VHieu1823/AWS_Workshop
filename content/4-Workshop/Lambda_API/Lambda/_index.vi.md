@@ -21,7 +21,7 @@ Function này nhận email và password, xác thực với Cognito và trả v�
    - **Runtime:** Node.js 20.x
    - **Execution role:** Use existing role → `lambda-workshop-role`
 
-![Tạo Lambda function](/images/img/LD1.png)
+![Tạo Lambda function](/AWS_Workshop/images/img/LD1.png)
 
 3. Nhấn **Create function**
 
@@ -35,7 +35,7 @@ Function này nhận email và password, xác thực với Cognito và trả v�
 | `CLIENT_ID`     | App client ID của Cognito     |
 | `CLIENT_SECRET` | App client secret của Cognito |
 
-![Lambda environment variables](/images/img/LD4.png)
+![Lambda environment variables](/AWS_Workshop/images/img/LD4.png)
 
 ### Thêm code
 

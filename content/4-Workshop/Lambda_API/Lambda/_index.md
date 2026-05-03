@@ -21,7 +21,7 @@ This function receives email and password, authenticates against Cognito, and re
    - **Runtime:** Node.js 20.x
    - **Execution role:** Use existing role → `lambda-workshop-role`
 
-![Create Lambda function](/images/img/LD1.png)
+![Create Lambda function](/AWS_Workshop/images/img/LD1.png)
 
 3. Click **Create function**
 
@@ -35,7 +35,7 @@ This function receives email and password, authenticates against Cognito, and re
 | `CLIENT_ID`     | Your Cognito App client ID     |
 | `CLIENT_SECRET` | Your Cognito App client secret |
 
-![Lambda environment variables](/images/img/LD4.png)
+![Lambda environment variables](/AWS_Workshop/images/img/LD4.png)
 
 ### Add the code
 

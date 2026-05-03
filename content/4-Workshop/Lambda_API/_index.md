@@ -9,10 +9,10 @@ In this section, we create the Lambda functions and wire them up to API Gateway.
 
 ## What we will build
 
-| Route | Lambda | Auth required |
-|-------|--------|---------------|
-| `POST /login` | `loginFunction` | No |
-| `GET /songs` | `getSongsFunction` | Yes (JWT) |
+| Route         | Lambda             | Auth required |
+| ------------- | ------------------ | ------------- |
+| `POST /login` | `loginFunction`    | No            |
+| `GET /songs`  | `getSongsFunction` | Yes (JWT)     |
 
 ## Steps
 

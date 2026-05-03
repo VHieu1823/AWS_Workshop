@@ -14,17 +14,17 @@ We create a REST API with two routes and attach a Cognito JWT Authorizer to prot
 1. Go to **API Gateway Console** → **Create API**
 2. Select **REST API** → **Build**
 
-![Create API](/images/img/AG1.png)
+![Create API](/AWS_Workshop/images/img/AG1.png)
 
 3. Configure:
    - **API name:** `workshop-api`
    - **Endpoint type:** Regional
 
-![Configure API](/images/img/AG2.png)
+![Configure API](/AWS_Workshop/images/img/AG2.png)
 
 4. Click **Create API**. You will see the root resource `/`.
 
-![Root resource](/images/img/AG3.png)
+![Root resource](/AWS_Workshop/images/img/AG3.png)
 
 ---
 
@@ -35,7 +35,7 @@ We create a REST API with two routes and attach a Cognito JWT Authorizer to prot
 1. Select the root `/` → **Actions** → **Create Resource**
 2. **Resource name:** `login` → **Create Resource**
 
-![Create login resource](/images/img/AG4.png)
+![Create login resource](/AWS_Workshop/images/img/AG4.png)
 
 3. Select `/login` → **Actions** → **Create Method** → **POST** → ✓
 4. Configure:
@@ -45,7 +45,7 @@ We create a REST API with two routes and attach a Cognito JWT Authorizer to prot
 
 5. Click **Save** → **OK** to grant permission
 
-![Create POST /login](/images/img/AG5.png)
+![Create POST /login](/AWS_Workshop/images/img/AG5.png)
 
 ### /songs resource
 
@@ -59,7 +59,7 @@ We create a REST API with two routes and attach a Cognito JWT Authorizer to prot
 
 5. Click **Save** → **OK**
 
-![Create GET /songs](/images/img/getsongapi.png)
+![Create GET /songs](/AWS_Workshop/images/img/getsongapi.png)
 
 ---
 
@@ -74,9 +74,9 @@ This authorizer will validate the JWT token on every request to `GET /songs`.
    - **Cognito User Pool:** select `workshop-pool`
    - **Token source:** `Authorization`
 
-![Create Cognito Authorizer](/images/img/auth1.png)
-![Create Cognito Authorizer](/images/img/auth2.png)
-![Create Cognito Authorizer](/images/img/auth3.png)
+![Create Cognito Authorizer](/AWS_Workshop/images/img/auth1.png)
+![Create Cognito Authorizer](/AWS_Workshop/images/img/auth2.png)
+![Create Cognito Authorizer](/AWS_Workshop/images/img/auth3.png)
 
 3. Click **Create**
 4. Click **Test** → enter the `idToken` from a login call → verify it returns `200`
@@ -90,8 +90,8 @@ This authorizer will validate the JWT token on every request to `GET /songs`.
 3. Under **Authorization**, select `CognitoAuthorizer` from the dropdown
 4. Click the ✓ checkmark to save
 
-![Attach authorizer](/images/img/meth1.png)
-![Attach authorizer result](/images/img/meth42.png)
+![Attach authorizer](/AWS_Workshop/images/img/meth1.png)
+![Attach authorizer result](/AWS_Workshop/images/img/meth42.png)
 
 Now `GET /songs` requires a valid JWT token. `POST /login` remains public.
 
@@ -104,8 +104,8 @@ For each resource (`/login` and `/songs`):
 1. Select the resource → **Actions** → **Enable CORS**
 2. Keep defaults → **Enable CORS and replace existing CORS headers** → **Yes**
 
-![Enable CORS](/images/img/cors1.png)
-![Enable CORS confirm](/images/img/cors2.png)
+![Enable CORS](/AWS_Workshop/images/img/cors1.png)
+![Enable CORS confirm](/AWS_Workshop/images/img/cors2.png)
 
 ---
 
@@ -116,7 +116,7 @@ For each resource (`/login` and `/songs`):
    - **Deployment stage:** [New Stage]
    - **Stage name:** `dev`
 
-![Deploy API](/images/img/AG7.png)
+![Deploy API](/AWS_Workshop/images/img/AG7.png)
 
 3. Click **Deploy**
 4. Copy the **Invoke URL** — it looks like:

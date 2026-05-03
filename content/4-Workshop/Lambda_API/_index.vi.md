@@ -9,10 +9,10 @@ Trong phần này, chúng ta tạo các Lambda function và kết nối chúng v
 
 ## Những gì sẽ xây dựng
 
-| Route | Lambda | Yêu cầu xác thực |
-|-------|--------|------------------|
-| `POST /login` | `loginFunction` | Không |
-| `GET /songs` | `getSongsFunction` | Có (JWT) |
+| Route         | Lambda             | Yêu cầu xác thực |
+| ------------- | ------------------ | ---------------- |
+| `POST /login` | `loginFunction`    | Không            |
+| `GET /songs`  | `getSongsFunction` | Có (JWT)         |
 
 ## Các bước
 

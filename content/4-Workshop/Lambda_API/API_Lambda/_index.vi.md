@@ -19,9 +19,9 @@ Tại bước này, cả hai Lambda function đã được kết nối với API
 
 5. Nhấn vào `/songs` → **GET** → **Method Request**
 6. Xác nhận **Authorization** hiển thị `CognitoAuthorizer`
-   ![Deploy API](/images/img/inter1.png)
-   ![Deploy API](/images/img/inter2.png)
-   ![Deploy API](/images/img/inter3.png)
+   ![Deploy API](/AWS_Workshop/images/img/inter1.png)
+   ![Deploy API](/AWS_Workshop/images/img/inter2.png)
+   ![Deploy API](/AWS_Workshop/images/img/inter3.png)
 
 ---
 

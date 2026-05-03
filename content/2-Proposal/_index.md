@@ -53,7 +53,7 @@ This solution helps the system:
 
 The system architecture is built using a serverless model, focusing on API processing flow:
 
-![ConnectPrivate](/images/aws_architec.png)
+![ConnectPrivate](/AWS_Workshop/images/aws_architec.png)
 
 - Users send requests from the frontend to API Gateway
 - API Gateway uses a Cognito Authorizer to authenticate users

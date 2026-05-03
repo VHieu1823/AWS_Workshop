@@ -20,9 +20,9 @@ At this point, both Lambda functions are connected to API Gateway. Let's do a qu
 5. Click on `/songs` → **GET** → **Method Request**
 6. Confirm **Authorization** shows `CognitoAuthorizer`
 
-![Check integration login](/images/img/inter1.png)
-![Check integration songs](/images/img/inter2.png)
-![Check authorizer](/images/img/inter3.png)
+![Check integration login](/AWS_Workshop/images/img/inter1.png)
+![Check integration songs](/AWS_Workshop/images/img/inter2.png)
+![Check authorizer](/AWS_Workshop/images/img/inter3.png)
 
 ---
 

@@ -8,7 +8,7 @@ pre: " <b> 3. </b> "
 
 ## 📌 Thông tin sự kiện
 
-![ConnectPrivate](/images/events/event1.jpg)
+![ConnectPrivate](/AWS_Workshop/images/events/event1.jpg)
 
 **Tên sự kiện:** FCAJ Community Day - Workshop Platform Engineering & GenAI trên AWS
 
@@ -90,6 +90,6 @@ Người tham dự
 - Mở rộng định hướng nghề nghiệp trong lĩnh vực Cloud, DevOps và AI
 - Phát triển kỹ năng tiếp nhận và tổng hợp thông tin từ workshop
 
-![ConnectPrivate](/images/events/event2.jpg)
+![ConnectPrivate](/AWS_Workshop/images/events/event2.jpg)
 
 ---
